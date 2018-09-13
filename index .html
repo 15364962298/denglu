@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" style="margin:150px auto;width:320px;height:200px;border-radius:8px;background: #9FA3AD;box-shadow:0 0 0 5000px rgba(0,0,0,0.8);padding:10px 10px;box-sizing-border-box;">
+        <h3 style="font-size:20px;text-align:center;color:#273385;">登录</h3>
+        <label for="" style="color:#ccc;display: block;margin-bottom:3px;">Username</label>
+        <input type="text" placeholder="请输入账号" id="name" style="outline:none;padding:5px;margin-bottom:10px;width:100%;height:30px;font-size:16px;box-sizing:border-box;border-radius:5px;"> <br>
+        <label for="" style="color:#ccc;display: block;margin-bottom:3px;">password</label>
+        <input type="password" placeholder="请输入密码" id="word" style="outline:none;padding-left:5px;margin-bottom:10px;width:100%;height:30px;font-size:16px;box-sizing:border-box;border-radius:5px;"> <br>
+       <button id="btn" style="width:100%;height:30px;margin-top:5px;background-image: linear-gradient(45deg,#5D2CFB,#E14860);color:rgba(255,255,255,0.8);border-radius:5px;outline: none;font-size:14px;border:1px solid #E14860;">login</button>
+    </form>
+</body>
+</html>
+<script>
+    window.onload=function(){
+        let name=document.getElementById("name");
+        let word=document.getElementById("word");
+        let btn=document.getElementById("btn");
+        btn.onclick=function() {
+            if(name.value=="guyaohua"&&word.value=="15364962298"){
+                alert('success');
+            }else{
+                open("error.html",'','width=600px,height=600px');
+                // location.href="error.html"
+            }
+        }
+    }
+</script>
